@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include <unordered_map>
 using namespace std;
@@ -20,3 +21,24 @@ public:
         return {};
     }
 };
+
+int main() {
+    Solution s;
+
+    vector<int> nums = {2, 7, 11, 15};
+    int target = 9;
+
+    vector<int> result = s.twoSum(nums, target);
+
+    if (!result.empty()) {
+        cout << "Indices: ";
+        for (int index : result) {
+            cout << index << " ";
+        }
+        cout << endl;
+    } else {
+        cout << "No solution found." << endl;
+    }
+
+    return 0;
+}
